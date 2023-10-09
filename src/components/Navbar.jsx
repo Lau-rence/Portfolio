@@ -32,11 +32,13 @@ const Navbar = () => {
             >
                 <Flex
                     align={'end'}
+                    fontSize={'25px'}
+                    fontFamily={'Nelsond'} 
                 >
-                    <Text
-                        fontSize={'25px'}
-                        fontFamily={'Nelsond'} 
-                    >
+                    <Text color={'#edb506'}>
+                        &#8623;
+                    </Text>
+                    <Text>
                         Lau-rence
                     </Text>
                 </Flex>
