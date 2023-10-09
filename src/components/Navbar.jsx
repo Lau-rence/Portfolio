@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
         <>
             <Box
-                py={3}
+                py={5}
                 color={'white'}
                 pl={['20px', '50px', '100px', '100px', '100px']}
                 pr={['15px', '15px', '15px', '15px', '100px']}
@@ -31,7 +31,7 @@ const Navbar = () => {
                 justifyContent={'space-between'}
             >
                 <Flex
-                    align={'center'}
+                    align={'end'}
                 >
                     <Text
                         fontSize={'25px'}
@@ -42,7 +42,7 @@ const Navbar = () => {
                 </Flex>
                 <Flex
                     display={['flex','flex','flex','none','none']}
-                    align={'center'}
+                    alignItems={'end'}
                 >  
                     <Menu>
                         <MenuButton cursor={'pointer'}>
@@ -60,17 +60,23 @@ const Navbar = () => {
                     </Menu>
                 </Flex>
                 <HStack
+                    align={'end'}
                     justify={'end'}
                     display={['none', 'none', 'none', 'flex', 'flex']}
                 >
                     {navbar.map(info=>(
                         <Box
-                            p={3}
+                            display={'flex'}
+                            height={'50px'}
+                            alignItems={'end'}
+                        >
+                        <Text
+                            px={5}
+                            height={'50%'}
+                            alignItems={'end'}
                             cursor={'pointer'}
-                            borderRadius={'10px'}
                             _hover={{bgColor: '#FFF', color: '#0a0a0a'}}
                         >
-                        <Text>
                             {info.title}
                         </Text>
                         </Box>

@@ -1,7 +1,27 @@
-import { Box, HStack, Heading, Image, Text, VStack} from "@chakra-ui/react";
+import { Box, HStack, Heading, Icon, Image, Text, VStack} from "@chakra-ui/react";
 import Marquee from "react-fast-marquee";
+import { FaLinkedin, FaGithubSquare, FaFacebookSquare} from "react-icons/fa";
 
 const Profile = () => {
+
+    const socialAccounts=[
+        {
+            social: 'Linkedin',
+            icon: FaLinkedin,
+            link: ''
+        },
+        {
+            social: 'Github',
+            icon: FaGithubSquare,
+            link: ''
+        },
+        {
+            social: 'Facebook',
+            icon: FaFacebookSquare,
+            link: ''
+        },
+    ]
+
     return ( 
         <Box 
             width={'100%'} 
@@ -20,26 +40,47 @@ const Profile = () => {
                 fontWeight={'bold'}
                 display={'Flex'}
             >
-                <VStack width={['20%','20%','70%','70%','70%']}>
-                <Box width={'100%'} display={['none','none','block','block','block']}>
-                    <Marquee
-                        style={{
-                            width: '100%',
-                            height: '225px',
-                        }}
-                        autoFill
+                <VStack
+                    spacing={0}
+                    width={['20%','20%','70%','70%','70%']} 
+                >
+                    <Box
+                        width={'100%'}
+                        height={'100px'}
                     >
-                            <Text
-                                mx={'30px'}
-                                color={'#edb506'}
-                            >
-                                WEB
-                            </Text>
-                            <Text color={'#FFF'}>
-                                DEVELOPER
-                            </Text>
-                    </Marquee>
-                </Box>
+                        <Heading>Hi, I'm Laurence Canlas Santos.</Heading>
+                    </Box>
+                    <Box
+                        bgColor={'#FFF'}
+                        color={'#626262'}
+                        p={10}
+                        borderRadius={'10px'}
+                        height={'max-content'}
+                        display={'flex'}
+                    >
+                        {socialAccounts.map(info=>(
+                            <Icon mx={2} as={info.icon} title={info.social} boxSize={'40px'}/>
+                        ))}
+                    </Box>
+                    <Box width={'100%'} display={['none','none','block','block','block']}>
+                        <Marquee
+                            style={{
+                                width: '100%',
+                                height: '225px',
+                            }}
+                            autoFill
+                        >
+                                <Text
+                                    mx={'30px'}
+                                    color={'#edb506'}
+                                >
+                                    WEB
+                                </Text>
+                                <Text color={'#FFF'}>
+                                    DEVELOPER
+                                </Text>
+                        </Marquee>
+                    </Box>
                 </VStack>
                 <Box
                     bgColor={'white'}
