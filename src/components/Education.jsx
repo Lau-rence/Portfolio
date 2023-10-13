@@ -38,7 +38,7 @@ const Education = () => {
                     height={"max-content"}
                     width={['95%','85%','80%','80%','80%']} 
                     borderRadius={'10px'}
-                    bgColor={'#626262'}
+                    bgColor={'#65737e'}
                     display={'flex'}
                     align={'center'}
                     p={'20px'}
@@ -48,7 +48,8 @@ const Education = () => {
                     <Heading
                         fontSize={['30px','40px','50px','50px','50px']}
                         fontWeight={'bold'} 
-                        fontFamily={'Poppins'} 
+                        fontFamily={'Poppins'}
+                        color={'#FFF'}
                     >
                         TECH STACK
                     </Heading>

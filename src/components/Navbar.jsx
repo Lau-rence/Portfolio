@@ -20,13 +20,13 @@ const Navbar = () => {
         <>
             <Box
                 py={5}
-                color={'white'}
+                color={'#FFF'}
                 pl={['20px', '50px', '100px', '100px', '100px']}
                 pr={['15px', '15px', '15px', '15px', '100px']}
                 display={'flex'}
                 fontSize={'17px'}
                 fontFamily={'Poppins'}
-                backgroundColor={'#0a0a0a'}
+                backgroundColor={'#343d46'}
                 boxShadow={'2px 2px 2px black'}
                 justifyContent={'space-between'}
             >
@@ -51,10 +51,10 @@ const Navbar = () => {
                             <Icon
                                 as={FiMenu}
                                 boxSize={'30px'}
-                                color={"white"}
+                                color={"c1c5ce"}
                             />
                         </MenuButton>
-                        <MenuList color={'#0a0a0a'} fontFamily={'Poppins'}>
+                        <MenuList color={'#343d46'} fontFamily={'Poppins'}>
                             {navbar.map(info=>(
                                 <MenuItem>{info.title}</MenuItem>
                             ))}
@@ -77,7 +77,7 @@ const Navbar = () => {
                             height={'50%'}
                             alignItems={'end'}
                             cursor={'pointer'}
-                            _hover={{bgColor: '#FFF', color: '#0a0a0a'}}
+                            _hover={{bgColor: '#c1c5ce', color: '#343d46'}}
                         >
                             {info.title}
                         </Text>

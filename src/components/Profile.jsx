@@ -8,17 +8,17 @@ const Profile = () => {
         {
             social: 'Linkedin',
             icon: FaLinkedin,
-            link: ''
+            link: 'https://www.linkedin.com/in/laurence-santos-478a8a258/'
         },
         {
             social: 'Github',
             icon: FaGithubSquare,
-            link: ''
+            link: 'https://github.com/Lau-rence'
         },
         {
             social: 'Facebook',
             icon: FaFacebookSquare,
-            link: ''
+            link: 'https://www.facebook.com/laurencecsantos/'
         },
     ]
 
@@ -30,19 +30,20 @@ const Profile = () => {
             <Box
                 width={'100%'}
                 height={'max-content'} 
-                bgColor={'#E6e6e6'}
+                bgColor={'#475b67'}
                 textAlign={'center'}
                 position={'relative'}
                 pt={'70px'}
                 display={'Flex'}
                 flexDirection={['column','column','row','row','row']}
+                color={'#FFF'}
             >
                 <Box
                     bgColor={'white'}
-                    borderRadius={'0px 100px 30px 0px'}
+                    borderRadius={['1000px 100px 1000px 100px','100px 100px 100px 100px','0px 100px 30px 0px','0px 100px 30px 0px','0px 100px 30px 0px',]}
                     px={['10px','20px','30px','30px','30px']}
                     pt={['10px','20px','30px','30px','30px']}
-                    width={['90%','90%','40%','35%','30%']}
+                    width={['100%','100%','40%','35%','30%']}
                     float={'right'}
 
                 > 
@@ -102,7 +103,9 @@ const Profile = () => {
                             display={'flex'}
                         >
                             {socialAccounts.map(info=>(
-                                <Icon mx={2} as={info.icon} title={info.social} boxSize={'40px'}/>
+                                <a href={info.link} target='_blank'>
+                                <Icon mx={2} as={info.icon} title={info.social} boxSize={'40px'} color={'#65737e'}/>
+                                </a>
                             ))}
                         </Box>
                     </Box>
@@ -122,7 +125,7 @@ const Profile = () => {
                         >
                                 <Text
                                     mx={'30px'}
-                                    color={'#edb506'}
+                                    color={'#201e1f'}
                                 >
                                     WEB
                                 </Text>
