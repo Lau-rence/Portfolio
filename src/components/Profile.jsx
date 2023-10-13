@@ -30,7 +30,7 @@ const Profile = () => {
             <Box
                 width={'100%'}
                 height={'max-content'} 
-                bgColor={'#dadbe0'}
+                bgColor={'#E6e6e6'}
                 textAlign={'center'}
                 position={'relative'}
                 pt={'70px'}
