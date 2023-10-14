@@ -34,7 +34,6 @@ const Projects = () => {
                 <Heading
                     color={'#FFF'} 
                     fontSize={'70px'}
-                    data-aos="fade-up"
                     fontFamily={'Bebas Neue'} 
                 >
                     PROJECTS
