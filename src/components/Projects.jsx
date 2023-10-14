@@ -47,7 +47,6 @@ const Projects = () => {
                         display={'flex'} 
                         bgColor={'#343d46'}
                         borderRadius={'10px'}
-                        data-aos="fade-right"
                         justifyContent={'center'}
                         flexDirection={['column-reverse','column-reverse','row','row','row']}
                     >

@@ -48,7 +48,6 @@ const Profile = () => {
                     pt={['10px','20px','30px','30px','30px']}
                     width={['100%','100%','40%','35%','30%']}
                     borderRadius={'1000px 100px 1000px 100px'}
-                    data-aos="fade-up-left"
                 > 
                      <Image
                         height={'auto'}
@@ -87,8 +86,8 @@ const Profile = () => {
                             justifyContent={'center'}
                             textDecoration={'underline'}
                         >
-                            <Text>Download CV</Text>
-                            <Text>View CV</Text>
+                            <Text cursor={'pointer'}>Download CV</Text>
+                            <Text cursor={'pointer'}>View CV</Text>
                         </HStack>
                     </Box>
                     <Box
@@ -104,7 +103,6 @@ const Profile = () => {
                             borderRadius={'10px'}
                             width={'fit-content'}
                             height={'max-content'}
-                            data-aos="fade-up"
                         >
                             {socialAccounts.map(info=>(
                                 <a

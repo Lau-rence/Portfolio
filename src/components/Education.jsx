@@ -31,7 +31,6 @@ const Education = () => {
                 display={'flex'}
                 alignItems={'center'}
                 height={'max-content'}
-                data-aos="fade-up-left"
                 justifyContent={'center'}
             >
                 <Box 
@@ -45,6 +44,7 @@ const Education = () => {
                     p={'20px'}
                     flexDir={'column'}
                     justify={'center'}
+                    data-aos="fade-right"
                 >
                     <Heading
                         fontSize={['30px','40px','50px','50px','50px']}

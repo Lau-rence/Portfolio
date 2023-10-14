@@ -117,7 +117,6 @@ const Contact = () => {
         >
             <Box 
                 mb={'50px'}
-                data-aos="fade-up"
                 width={'max-content'}  
             >
                 <Heading 
@@ -138,8 +137,7 @@ const Contact = () => {
             <Form onSubmit={handleSubmit}>
                 <Box
                     p={10}
-                    bg={'#65737e'} 
-                    data-aos="fade-left"
+                    bg={'#65737e'}
                     width={'fit-content'} 
                     borderRadius={'10px'}
                     height={'max-content'}
@@ -213,7 +211,6 @@ const Contact = () => {
                     width={'80%'}
                     color={'#FFF'}
                     display={'flex'}
-                    data-aos="fade-right"
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     flexDirection={['column','column','row','row','row']}
