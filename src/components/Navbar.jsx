@@ -19,12 +19,12 @@ const Navbar = () => {
     return (
         <>
             <Box
-                py={5}
+                py={4}
                 color={'#FFF'}
                 pl={['20px', '50px', '100px', '100px', '100px']}
                 pr={['15px', '15px', '15px', '15px', '100px']}
                 display={'flex'}
-                fontSize={'17px'}
+                fontSize={'20px'}
                 fontFamily={'Poppins'}
                 backgroundColor={'#343d46'}
                 boxShadow={'2px 2px 2px black'}
