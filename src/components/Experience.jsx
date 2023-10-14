@@ -9,17 +9,19 @@ const Experience = () => {
             role: 'Web Developer Intern',
         }
     ]
-    return ( 
+    return (
         <Box
             py={'80px'}
             width={'100%'} 
             display={'flex'} 
+            id={'experience'}
             flexDir={'column'} 
-            alignItems={'center'} 
+            alignItems={'center'}
         >
             <Box 
                 mb={'50px'}
-                width={'max-content'}  
+                data-aos="fade-up"
+                width={'max-content'} 
             >
                 <Heading 
                     fontSize={['40px','40px','60px','60px','60px']} 
@@ -36,6 +38,7 @@ const Experience = () => {
             {experience.map(info=>(
                 <VStack 
                     width={'80%'}
+                    data-aos="fade-right"
                 >
                     <Box
                         padding={'10px'}

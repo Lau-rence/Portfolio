@@ -19,7 +19,8 @@ const Projects = () => {
     return ( 
         <Box
             py={'50px'}
-            width={'100%'} 
+            width={'100%'}
+            id={'projects'}
             display={'flex'}
             bgColor={'#475b67'}
             alignItems={'center'}

@@ -24,6 +24,7 @@ const Profile = () => {
 
     return ( 
         <Box 
+            id={'about'}
             width={'100%'} 
             height={'max-content'}
         >
@@ -47,6 +48,7 @@ const Profile = () => {
                     pt={['10px','20px','30px','30px','30px']}
                     width={['100%','100%','40%','35%','30%']}
                     borderRadius={'1000px 100px 1000px 100px'}
+                    data-aos="fade-up"
                 > 
                      <Image
                         height={'auto'}
@@ -102,6 +104,7 @@ const Profile = () => {
                             borderRadius={'10px'}
                             width={'fit-content'}
                             height={'max-content'}
+                            data-aos="fade-up"
                         >
                             {socialAccounts.map(info=>(
                                 <a

@@ -50,6 +50,7 @@ const Education = () => {
                         fontWeight={'bold'} 
                         fontFamily={'Poppins'}
                         color={'#FFF'}
+                        data-aos="fade-right"
                     >
                         TECH STACK
                     </Heading>

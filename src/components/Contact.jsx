@@ -1,40 +1,115 @@
 //Packages
-import { Box, Button, FormControl, FormLabel, HStack, Heading, Input, Textarea, Flex, Text, VStack, Icon} from "@chakra-ui/react";
+import { 
+    Box, 
+    Button, 
+    FormControl, 
+    FormLabel, 
+    HStack, 
+    Heading, 
+    Input, 
+    Textarea, 
+    Flex, 
+    Text, 
+    VStack, 
+    Icon, 
+    useToast
+} from "@chakra-ui/react";
 import { Form } from "react-router-dom";
 import { BsFillEnvelopeFill, BsFillTelephoneFill  } from "react-icons/bs";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import axios from 'axios'
+import { useState } from "react";
 
 const Contact = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const toast = useToast();
 
     const contact = [
         {
             icon: BsFillEnvelopeFill,
-            title: 'Email',
+            type: 'Email',
             info: 'rencesantos14@gmail.com',
             description: 'rencesantos14@gmail.com'
         },
         {
             icon: BsFillTelephoneFill,
-            title: 'Phone Number',
+            type: 'Phone Number',
             info: '09476032653',
             description: '09476032653'
         },
         {
             icon: FaFacebookSquare,
-            title: 'Facebook',
+            type: 'Facebook',
             info: 'https://www.facebook.com/laurencecsantos',
             description: 'Laurence Santos'
         },
         {
             icon: FaLinkedin,
-            title: 'Linkedin',
+            type: 'Linkedin',
             info: 'https://www.linkedin.com/in/laurence-santos-478a8a258/',
             description: 'Laurence Santos'
         }
     ]
+
+    const handlelink = (data) => {
+        switch (data?.type) {
+          case 'Email':
+            window.location = `mailto:${data?.info}`;
+            break;
+          case 'Phone Number':
+            window.location = `tel:${data?.info}`;
+            break;
+          case 'Facebook':
+            window.location = `${data?.info}`;
+            break;
+          case 'Linkedin':
+            window.location = `${data?.info}`;
+            break;
+          default:
+            break;
+        }
+      };
+
+      const handleSubmit = () =>{
+        axios.post('https://nodemailer-imko.vercel.app/send-email', {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            subject: subject,
+            message: message
+        }).then(response=>{
+            if(response.data=='Email sent successfully'){
+                toast({
+                    title: 'Success.',
+                    description: "Your email has been sent.",
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                    position: 'top'
+                  })
+            }
+            else{
+                toast({
+                    title: 'Error.',
+                    description: "Failed to send email.",
+                    status: 'error',
+                    duration: 5000,
+                    isClosable: true,
+                    position: 'top'
+                  })
+            }
+        })
+      }
+
     return ( 
         <Box
             py={'80px'}
+            id={'contact'}
             width={'100%'} 
             display={'flex'} 
             flexDir={'column'} 
@@ -59,35 +134,38 @@ const Contact = () => {
             <HStack>
                 
             </HStack>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Box
                     p={10}
                     bg={'#65737e'} 
                     width={'fit-content'} 
-                    height={'max-content'}
                     borderRadius={'10px'} 
+                    height={'max-content'}
                 >
                     <HStack>
                         <FormControl isRequired>
                             <FormLabel>First name:</FormLabel>
                             <Input
-                                bgColor={'white'}
                                 type={"text"}
+                                bgColor={'white'}
+                                onChange={(e)=>setFirstName(e.target.value)}
                             ></Input>
                         </FormControl>
                         <FormControl isRequired>
                             <FormLabel>Surname:</FormLabel>
                             <Input
-                                bgColor={'white'}
                                 type={"text"}
+                                bgColor={'white'}
+                                onChange={(e)=>setLastName(e.target.value)}
                             ></Input>
                         </FormControl>
                     </HStack>
                     <FormControl isRequired>
                         <FormLabel>Email:</FormLabel>
                         <Input
-                            bgColor={'white'}
                             type={"text"}
+                            bgColor={'white'}
+                            onChange={(e)=>setEmail(e.target.value)}
                         ></Input>
                     </FormControl>
                     <FormControl isRequired>
@@ -95,13 +173,15 @@ const Contact = () => {
                         <Input
                             bgColor={'white'}
                             type={"text"}
+                            onChange={(e)=>setSubject(e.target.value)}
                         ></Input>
                     </FormControl>
                     <FormControl isRequired>
-                        <FormLabel>Surname:</FormLabel>
+                        <FormLabel>Message:</FormLabel>
                         <Textarea
                             bgColor={'#FFF'}
                             placeholder="Enter your message..."
+                            onChange={(e)=>setMessage(e.target.value)}
                         ></Textarea>
                     </FormControl>
                     <Flex
@@ -147,12 +227,13 @@ const Contact = () => {
                             borderRadius={'10px'}
                             flexDirection={'column'}
                             justifyContent={'space-between'}
-                            width={['80%','100%','24%','24%','24%']} 
+                            width={['80%','100%','24%','24%','24%']}
+                            onClick={()=> handlelink(info)}
                         >
                                 <Icon as={info.icon} boxSize={10}></Icon>
                                 <Text
                                     textAlign={'center'}
-                                >{info.title}</Text>
+                                >{info.type}</Text>
                                 <Text
                                     textAlign={'center'}
                                 >{info.description}</Text>

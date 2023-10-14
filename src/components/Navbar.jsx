@@ -1,21 +1,33 @@
 import { Box, Flex, HStack, Text, Menu, MenuButton, Button, MenuList, MenuItem, Icon} from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 
+
+const navbar = [
+    {
+        title: 'About',
+        page: '#about'
+    },
+    {
+        title: 'Experience',
+        page: '#experience'
+    },
+    {
+        title: 'Projects',
+        page: '#projects'
+    },
+    {
+        title: 'Contact',
+        page: '#contact'
+    }
+]
+
+
 const Navbar = () => {
-    const navbar = [
-        {
-            title: 'About'
-        },
-        {
-            title: 'Experience'
-        },
-        {
-            title: 'Projects'
-        },
-        {
-            title: 'Contact'
-        }
-    ]
+    const scrollToSection = (id) => {
+        const element = document.querySelector(id);
+        element.scrollIntoView({ behavior: 'smooth' });
+      };
+
     return (
         <>
             <Box
@@ -56,7 +68,7 @@ const Navbar = () => {
                         </MenuButton>
                         <MenuList color={'#343d46'} fontFamily={'Poppins'}>
                             {navbar.map(info=>(
-                                <MenuItem>{info.title}</MenuItem>
+                                <MenuItem onClick={()=>scrollToSection(info.page)}>{info.title}</MenuItem>
                             ))}
                         </MenuList>
                     </Menu>
@@ -71,6 +83,7 @@ const Navbar = () => {
                             display={'flex'}
                             height={'50px'}
                             alignItems={'end'}
+                            onClick={()=>scrollToSection(info.page)}
                         >
                         <Text
                             px={5}
