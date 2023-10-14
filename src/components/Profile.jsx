@@ -129,7 +129,7 @@ const Profile = () => {
                                 >
                                     WEB
                                 </Text>
-                                <Text color={['#0a0a0a','#0a0a0a','#FFF','#FFF','#FFF']}>
+                                <Text color={'#FFF'}>
                                     DEVELOPER
                                 </Text>
                         </Marquee>
