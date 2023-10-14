@@ -2,6 +2,8 @@ import { Box, HStack, Heading, Icon, Image, Text, VStack} from "@chakra-ui/react
 import Marquee from "react-fast-marquee";
 import { FaLinkedin, FaGithubSquare, FaFacebookSquare} from "react-icons/fa";
 
+import resume from '../assets/CV_Santos, Laurence.pdf'
+
 const Profile = () => {
 
     const socialAccounts=[
@@ -86,8 +88,9 @@ const Profile = () => {
                             justifyContent={'center'}
                             textDecoration={'underline'}
                         >
-                            <Text cursor={'pointer'}>Download CV</Text>
-                            <Text cursor={'pointer'}>View CV</Text>
+                            <a href={resume} download={'CV_Santos, Laurence'}>
+                                <Text cursor={'pointer'}>Download CV</Text>
+                            </a>
                         </HStack>
                     </Box>
                     <Box
@@ -115,6 +118,10 @@ const Profile = () => {
                                         boxSize={'40px'} 
                                         color={'#65737e'}
                                         title={info.social} 
+                                        _hover={{
+                                            transform: 'translateY(-10px)',
+                                            transition: 'transform 0.3s ease',
+                                        }}
                                     />
                                 </a>
                             ))}

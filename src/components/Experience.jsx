@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Heading, Image, UnorderedList,ListItem, Text, VStack } from "@chakra-ui/react";
 
 const Experience = () => {
     const experience = [
@@ -75,6 +75,42 @@ const Experience = () => {
                     >
                         {info.what}
                     </Text>
+                    <Accordion allowMultiple width={'40%'}>
+                        <AccordionItem>
+                            <AccordionButton
+                                color={'#FFF'}
+                                bgColor={'#475767'}
+                                _hover={{color: '#475767', bgColor: '#FFF'}}
+                            >
+                                <Box
+                                    as="span" 
+                                    flex='1' 
+                                    textAlign='center'
+                                >
+                                    Show Responsibilities
+                                </Box>
+                            </AccordionButton>
+                            <AccordionPanel pb={4}>
+                                <UnorderedList>
+                                    <ListItem>
+                                        Translate Figma designs into functional websites.
+                                    </ListItem>
+                                    <ListItem>
+                                        Resolve UI issues and bugs.
+                                    </ListItem>
+                                    <ListItem>
+                                        Set up and configure local development environments.
+                                    </ListItem>
+                                    <ListItem>
+                                        Implement button functionalities.
+                                    </ListItem>
+                                    <ListItem>
+                                        Participate in Research and Development.
+                                    </ListItem>
+                                </UnorderedList>
+                            </AccordionPanel>
+                        </AccordionItem>
+                    </Accordion>
                 </VStack>
             ))}
         </Box>

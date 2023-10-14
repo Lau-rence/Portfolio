@@ -20,6 +20,7 @@ import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import axios from 'axios'
 import { useState } from "react";
 
+
 const Contact = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -189,11 +190,12 @@ const Contact = () => {
                         justify={'center'}
                     >
                         <Button
-                            type={'submit'}
-                            bgColor={'#343d46'}
                             color={'#FFF'}
                             width={'100%'}
+                            type={'submit'}
                             fontSize={'20px'}
+                            bgColor={'#343d46'}
+                            _hover={{color: '#475767', bgColor: '#FFF'}}
                         >Send</Button>
                     </Flex>
                 </Box>
@@ -229,6 +231,10 @@ const Contact = () => {
                             justifyContent={'space-between'}
                             width={['80%','100%','24%','24%','24%']}
                             onClick={()=> handlelink(info)}
+                            _hover={{
+                                transform: 'translateY(-10px)',
+                                transition: 'transform 0.3s ease',
+                            }}
                         >
                                 <Icon as={info.icon} boxSize={10}></Icon>
                                 <Text
