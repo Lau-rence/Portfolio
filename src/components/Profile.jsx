@@ -48,11 +48,11 @@ const Profile = () => {
                     pt={['10px','20px','30px','30px','30px']}
                     width={['100%','100%','40%','35%','30%']}
                     borderRadius={'1000px 100px 1000px 100px'}
-                    data-aos="fade-up"
+                    data-aos="fade-up-left"
                 > 
                      <Image
                         height={'auto'}
-                        src={'laurence.png'} 
+                        src={'laurence.png'}
                         width={['80%','80%','100%','100%','100%']}
                     ></Image>
                 </Box>

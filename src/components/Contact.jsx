@@ -117,11 +117,12 @@ const Contact = () => {
         >
             <Box 
                 mb={'50px'}
+                data-aos="fade-up"
                 width={'max-content'}  
             >
                 <Heading 
-                    fontSize={['40px','40px','60px','60px','60px']} 
                     color={'#475b67'}
+                    fontSize={['40px','40px','60px','60px','60px']} 
                 >
                     GET IN TOUCH
                 </Heading>
@@ -138,8 +139,9 @@ const Contact = () => {
                 <Box
                     p={10}
                     bg={'#65737e'} 
+                    data-aos="fade-left"
                     width={'fit-content'} 
-                    borderRadius={'10px'} 
+                    borderRadius={'10px'}
                     height={'max-content'}
                 >
                     <HStack>
@@ -211,9 +213,10 @@ const Contact = () => {
                     width={'80%'}
                     color={'#FFF'}
                     display={'flex'}
-                    flexDirection={['column','column','row','row','row']}
-                    justifyContent={'space-between'}
+                    data-aos="fade-right"
                     alignItems={'center'}
+                    justifyContent={'space-between'}
+                    flexDirection={['column','column','row','row','row']}
                 >
                     {contact.map(info=>(
                         <Box

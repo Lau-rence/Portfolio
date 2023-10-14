@@ -25,13 +25,14 @@ const Education = () => {
     return ( 
         <>
            <Box
+                py={'50px'}
                 width={'100%'}
                 bgColor={'#FFF'}
-                height={'max-content'}
                 display={'flex'}
-                justifyContent={'center'}
                 alignItems={'center'}
-                py={'50px'}
+                height={'max-content'}
+                data-aos="fade-up-left"
+                justifyContent={'center'}
             >
                 <Box 
                     boxShadow={'2px 2px 4px black'} 
@@ -50,7 +51,6 @@ const Education = () => {
                         fontWeight={'bold'} 
                         fontFamily={'Poppins'}
                         color={'#FFF'}
-                        data-aos="fade-right"
                     >
                         TECH STACK
                     </Heading>

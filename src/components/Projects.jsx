@@ -34,6 +34,7 @@ const Projects = () => {
                 <Heading
                     color={'#FFF'} 
                     fontSize={'70px'}
+                    data-aos="fade-up"
                     fontFamily={'Bebas Neue'} 
                 >
                     PROJECTS
@@ -46,6 +47,7 @@ const Projects = () => {
                         display={'flex'} 
                         bgColor={'#343d46'}
                         borderRadius={'10px'}
+                        data-aos="fade-right"
                         justifyContent={'center'}
                         flexDirection={['column-reverse','column-reverse','row','row','row']}
                     >
