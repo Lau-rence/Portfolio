@@ -29,28 +29,29 @@ const Profile = () => {
         >
             <Box
                 width={'100%'}
-                height={'max-content'} 
+                color={'#FFF'}
+                display={'Flex'}
                 bgColor={'#475b67'}
                 textAlign={'center'}
                 position={'relative'}
-                pt={'70px'}
-                display={'Flex'}
+                height={'max-content'} 
+                pt={['20px','20px','50px','50px','50px']}
                 flexDirection={['column','column','row','row','row']}
-                color={'#FFF'}
             >
                 <Box
+                    float={'right'}
+                    display={'flex'}
                     bgColor={'white'}
-                    borderRadius={'1000px 100px 1000px 100px'}
+                    justifyContent={'center'}
                     px={['10px','20px','30px','30px','30px']}
                     pt={['10px','20px','30px','30px','30px']}
                     width={['100%','100%','40%','35%','30%']}
-                    float={'right'}
-
+                    borderRadius={'1000px 100px 1000px 100px'}
                 > 
                      <Image
-                        width={'100%'}
+                        height={'auto'}
                         src={'laurence.png'} 
-                        height={'auto%'}
+                        width={['80%','80%','100%','100%','100%']}
                     ></Image>
                 </Box>
                 <Box
@@ -58,16 +59,16 @@ const Profile = () => {
                     width={['100%','100%','60%','65%','70%']}
                 >
                     <Box
+                        px={'30px'}
+                        pb={'10px'}
                         width={'100%'}
                         height={'max-content'}
                         pt={['10px','10px','30px','30px','30px']}
-                        px={'30px'}
-                        pb={'10px'}
-                    >
+                        >
                         <Heading
-                            fontSize={['30px','40px','50px','50px','50px']}
                             fontWeight={'bold'} 
                             fontFamily={'Poppins'} 
+                            fontSize={['30px','40px','50px','50px','50px']}
                         >
                             Laurence Canlas Santos
                         </Heading>
@@ -94,27 +95,36 @@ const Profile = () => {
                         justifyContent={'center'}    
                     >
                         <Box
-                            width={'fit-content'}
-                            bgColor={'#FFF'}
-                            color={'#626262'}
                             p={10}
-                            borderRadius={'10px'}
-                            height={'max-content'}
+                            bgColor={'#FFF'}
                             display={'flex'}
+                            color={'#626262'}
+                            borderRadius={'10px'}
+                            width={'fit-content'}
+                            height={'max-content'}
                         >
                             {socialAccounts.map(info=>(
-                                <a href={info.link} target='_blank'>
-                                <Icon mx={2} as={info.icon} title={info.social} boxSize={'40px'} color={'#65737e'}/>
+                                <a
+                                    target='_blank'
+                                    href={info.link} 
+                                >
+                                    <Icon
+                                        mx={2} 
+                                        as={info.icon} 
+                                        boxSize={'40px'} 
+                                        color={'#65737e'}
+                                        title={info.social} 
+                                    />
                                 </a>
                             ))}
                         </Box>
                     </Box>
                     <Box
-                        color={'#010001'} 
-                        fontSize={'150px'} 
-                        fontFamily={'Bebas Neue'}
-                        fontWeight={'bold'} 
                         width={'100%'}
+                        color={'#010001'} 
+                        fontSize={['75px','75px','150px','150px','150px']} 
+                        fontWeight={'bold'} 
+                        fontFamily={'Bebas Neue'}
                     >
                         <Marquee
                             style={{
@@ -129,7 +139,9 @@ const Profile = () => {
                                 >
                                     WEB
                                 </Text>
-                                <Text color={'#FFF'}>
+                                <Text
+                                    color={'#FFF'}
+                                >
                                     DEVELOPER
                                 </Text>
                         </Marquee>

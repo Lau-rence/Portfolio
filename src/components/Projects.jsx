@@ -20,7 +20,10 @@ const Projects = () => {
         <Box
             py={'50px'}
             width={'100%'} 
-            bgColor={'#475b67'} 
+            display={'flex'}
+            bgColor={'#475b67'}
+            alignItems={'center'}
+            flexDirection={'column'}
         >
             <Flex 
                 pb={'30px'} 
@@ -37,24 +40,27 @@ const Projects = () => {
             </Flex>
                 {projects.map(info=>(
                     <Box
-                        pb={'30px'}
-                        width={'100%'} 
+                        mb={'30px'}
+                        width={'80%'} 
                         display={'flex'} 
+                        bgColor={'#343d46'}
+                        borderRadius={'10px'}
                         justifyContent={'center'}
                         flexDirection={['column-reverse','column-reverse','row','row','row']}
                     >
                         <VStack 
-                            width={['100%','100%','50%','50%','50%']} 
                             justify={'center'}
+                            width={['100%','100%','50%','50%','50%']} 
                         >
                             <Box 
+                                gap={3}
                                 width={'80%'} 
                                 color={'white'}
                                 display={'flex'} 
                                 flexDir={'column'} 
                                 alignItems={'center'}
-                                gap={3}
-                                pb={3}
+                                pt={['0px','0px','20px','20px','0px']}
+                                pb={['20px','20px','20px','20px','0px']}
                             >
                                 <Heading 
                                     textAlign={'center'}
@@ -71,8 +77,8 @@ const Projects = () => {
                                     target={'_blank'}
                                 >
                                     <Button 
-                                        color={'#FFF'}
-                                        bgColor={'#343d46'} 
+                                        bgColor={'#FFF'}
+                                        color={'#343d46'}
                                     >
                                         View
                                     </Button>
@@ -80,17 +86,17 @@ const Projects = () => {
                             </Box>
                         </VStack>
                         <Box 
-                            width={['100%','100%','50%','50%','50%']} 
                             display={'flex'} 
                             flexDir={'column'}
-                            justifyContent={['center','center','start','start','start']}
                             alignItems={'center'}
+                            width={['100%','100%','50%','50%','50%']} 
+                            justifyContent={['center','center','start','start','start']}
                         >
                             <Image 
-                                width={'80%'} 
+                                width={'100%'} 
                                 src={info.pic} 
-                                height={'auto'} 
-                                borderRadius={'10px 10px 0px 0px'}
+                                height={'auto'}
+                                borderRadius={['10px 10px 0px 0px','10px 10px 0px 0px','0px 10px 0px 0px','0px 10px 0px 0px','0px 10px 0px 0px']}
                             />
                             <Box
                                 width={'80%'}
