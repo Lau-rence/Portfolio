@@ -40,7 +40,7 @@ const Profile = () => {
             >
                 <Box
                     bgColor={'white'}
-                    borderRadius={['1000px 100px 1000px 100px','100px 100px 100px 100px','0px 100px 30px 0px','0px 100px 30px 0px','0px 100px 30px 0px',]}
+                    borderRadius={'1000px 100px 1000px 100px'}
                     px={['10px','20px','30px','30px','30px']}
                     pt={['10px','20px','30px','30px','30px']}
                     width={['100%','100%','40%','35%','30%']}

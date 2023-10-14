@@ -41,7 +41,7 @@ const Projects = () => {
                         width={'100%'} 
                         display={'flex'} 
                         justifyContent={'center'}
-                        flexDirection={['column','column','row','row','row']}
+                        flexDirection={['column-reverse','column-reverse','row','row','row']}
                     >
                         <VStack 
                             width={['100%','100%','50%','50%','50%']} 
