@@ -75,7 +75,7 @@ const Experience = () => {
                     >
                         {info.what}
                     </Text>
-                    <Accordion allowMultiple width={'40%'}>
+                    <Accordion allowMultiple width={['90%','60%','50%','40%','40%']}>
                         <AccordionItem>
                             <AccordionButton
                                 color={'#FFF'}
