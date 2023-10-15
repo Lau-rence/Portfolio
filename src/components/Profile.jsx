@@ -103,6 +103,7 @@ const Profile = () => {
                             bgColor={'#FFF'}
                             display={'flex'}
                             color={'#626262'}
+                            data-aos="fade-up"
                             borderRadius={'10px'}
                             width={'fit-content'}
                             height={'max-content'}

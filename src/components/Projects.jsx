@@ -29,7 +29,8 @@ const Projects = () => {
             <Flex 
                 pb={'30px'} 
                 width={'100%'}
-                justify={'center'} 
+                justify={'center'}
+                data-aos="fade-up"
             >
                 <Heading
                     color={'#FFF'} 
@@ -41,6 +42,7 @@ const Projects = () => {
             </Flex>
                 {projects.map(info=>(
                     <Box
+                        data-aos="fade-left"
                         mb={'30px'}
                         width={'80%'} 
                         display={'flex'} 

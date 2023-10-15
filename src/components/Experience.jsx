@@ -20,6 +20,7 @@ const Experience = () => {
         >
             <Box 
                 mb={'50px'}
+                data-aos="fade-up"
                 width={'max-content'} 
             >
                 <Heading 
@@ -37,6 +38,7 @@ const Experience = () => {
             {experience.map(info=>(
                 <VStack 
                     width={'80%'}
+                    data-aos="fade-right"
                 >
                     <Box
                         padding={'10px'}

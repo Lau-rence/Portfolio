@@ -34,16 +34,17 @@ const Education = () => {
                 justifyContent={'center'}
             >
                 <Box 
-                    boxShadow={'2px 2px 4px black'} 
-                    height={"max-content"}
-                    width={['95%','85%','80%','80%','80%']} 
-                    borderRadius={'10px'}
-                    bgColor={'#65737e'}
-                    display={'flex'}
-                    align={'center'}
                     p={'20px'}
-                    flexDir={'column'}
+                    align={'center'}
+                    display={'flex'}
                     justify={'center'}
+                    flexDir={'column'}
+                    bgColor={'#65737e'}
+                    data-aos="fade-down"
+                    borderRadius={'10px'}
+                    height={"max-content"}
+                    boxShadow={'2px 2px 4px black'} 
+                    width={['95%','85%','80%','80%','80%']} 
                 >
                     <Heading
                         fontSize={['30px','40px','50px','50px','50px']}

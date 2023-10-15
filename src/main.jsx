@@ -9,9 +9,11 @@ import { register } from 'swiper/element/bundle';
 register();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
+  <div style={{overflow: 'hidden'}}>
+    <React.StrictMode>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </React.StrictMode>
+  </div>
 )

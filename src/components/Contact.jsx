@@ -118,7 +118,8 @@ const Contact = () => {
         >
             <Box 
                 mb={'50px'}
-                width={'max-content'}  
+                data-aos="fade-up"
+                width={'max-content'} 
             >
                 <Heading 
                     color={'#475b67'}
@@ -139,6 +140,7 @@ const Contact = () => {
                 <Box
                     p={10}
                     bg={'#65737e'}
+                    data-aos="fade-right"
                     width={'fit-content'} 
                     borderRadius={'10px'}
                     height={'max-content'}
@@ -206,13 +208,14 @@ const Contact = () => {
                 <Box border={'1px solid #65737e'} width={'100%'}></Box>
             </HStack>
             <VStack width={'100%'}>
-                <Flex width={'100%'} justify={'center'} mb={'20px'}>
+                <Flex width={'100%'} justify={'center'} mb={'20px'} data-aos="fade-up">
                     <Heading color={'#343d46'}>Contact Information</Heading>
                 </Flex>
                 <Box
                     width={'80%'}
                     color={'#FFF'}
                     display={'flex'}
+                    data-aos="fade-left"
                     alignItems={'center'}
                     justifyContent={'space-between'}
                     flexDirection={['column','column','row','row','row']}
