@@ -20,7 +20,7 @@ const Loading = ({isOpen}) => {
                 <CircularProgress
                     size={'100px'} 
                     isIndeterminate 
-                    color='blue'
+                    color='#475767'
                 >
                     <CircularProgressLabel fontSize={'16px'}>Loading...</CircularProgressLabel>
                 </CircularProgress>
