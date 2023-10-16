@@ -1,5 +1,7 @@
 import { Box, Flex, HStack, Text, Menu, MenuButton, Button, MenuList, MenuItem, Icon} from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
+import GoToTop from "./GoToTop";
+import { useState, useEffect } from "react";
 
 
 const navbar = [
@@ -23,10 +25,31 @@ const navbar = [
 
 
 const Navbar = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
     const scrollToSection = (id) => {
         const element = document.querySelector(id);
         element.scrollIntoView({ behavior: 'smooth' });
       };
+
+  // Check scroll position and update the visibility state
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add a scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
     return (
         <>
@@ -98,6 +121,7 @@ const Navbar = () => {
                     ))}
                 </HStack>
             </Box>
+            <GoToTop isVisible={isVisible}/>
         </>
      );
 }
