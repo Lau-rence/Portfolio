@@ -19,6 +19,7 @@ import { BsFillEnvelopeFill, BsFillTelephoneFill  } from "react-icons/bs";
 import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import axios from 'axios'
 import { useState } from "react";
+import Loading from "./Loading";
 
 
 const Contact = () => {
@@ -27,6 +28,7 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false)
 
     const toast = useToast();
 
@@ -77,6 +79,7 @@ const Contact = () => {
       };
 
       const handleSubmit = () =>{
+        setLoading(true);
         axios.post('https://nodemailer-imko.vercel.app/send-email', {
             firstName: firstName,
             lastName: lastName,
@@ -92,7 +95,8 @@ const Contact = () => {
                     duration: 5000,
                     isClosable: true,
                     position: 'top'
-                  })
+                })
+                setLoading(false);
             }
             else{
                 toast({
@@ -102,7 +106,8 @@ const Contact = () => {
                     duration: 5000,
                     isClosable: true,
                     position: 'top'
-                  })
+                })
+                  setLoading(false);
             }
         })
       }
@@ -114,7 +119,7 @@ const Contact = () => {
             width={'100%'} 
             display={'flex'} 
             flexDir={'column'} 
-            alignItems={'center'} 
+            alignItems={'center'}
         >
             <Box 
                 mb={'50px'}
@@ -250,6 +255,7 @@ const Contact = () => {
                     ))}
                 </Box>
             </VStack>
+            <Loading isOpen={loading}/>
         </Box>
      );
 }

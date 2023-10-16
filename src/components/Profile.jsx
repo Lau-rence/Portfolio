@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Icon, Image, Text, VStack} from "@chakra-ui/react";
+import { Box, HStack, Heading, Icon, Image, Text, VStack, CircularProgress} from "@chakra-ui/react";
 import Marquee from "react-fast-marquee";
 import { FaLinkedin, FaGithubSquare, FaFacebookSquare} from "react-icons/fa";
 
