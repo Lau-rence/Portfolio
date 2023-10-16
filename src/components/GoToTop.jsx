@@ -14,14 +14,7 @@ const GoToTop = ({isVisible}) => {
     if(!isVisible) return null;
     return ( 
         <Box
-            width={'100%'} 
-            height={'max-content'}
-            position={'fixed'}
-            top={0}
-            bottom={0}
-            right={0}
-            left={0}
-            zIndex={1}
+            width={'100%'}
             display={'flex'}
             alignItems={'start'}
             justifyContent={'end'}
@@ -29,6 +22,10 @@ const GoToTop = ({isVisible}) => {
             <Box
                 p={0}
                 m={2}
+                zIndex={2}
+                top={0}
+                position={'fixed'}
+                cursor={'pointer'}
                 bgColor={'#343d46'}
                 width={'fit-content'} 
                 height={'max-content'}
