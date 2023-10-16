@@ -15,7 +15,7 @@ const GoToTop = ({isVisible}) => {
     return ( 
         <Box
             width={'100%'} 
-            height={'100%'}
+            height={'max-content'}
             position={'fixed'}
             top={0}
             bottom={0}
