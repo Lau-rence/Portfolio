@@ -97,6 +97,7 @@ const Contact = () => {
                     position: 'top'
                 })
                 setLoading(false);
+                clearForm();
             }
             else{
                 toast({
@@ -108,10 +109,18 @@ const Contact = () => {
                     position: 'top'
                 })
                   setLoading(false);
+                  clearForm();
             }
         })
       }
 
+    const clearForm = () =>  {
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+    }
     return ( 
         <Box
             py={'80px'}
@@ -155,6 +164,7 @@ const Contact = () => {
                             <FormLabel>First name:</FormLabel>
                             <Input
                                 type={"text"}
+                                value={firstName}
                                 bgColor={'white'}
                                 onChange={(e)=>setFirstName(e.target.value)}
                             ></Input>
@@ -163,6 +173,7 @@ const Contact = () => {
                             <FormLabel>Surname:</FormLabel>
                             <Input
                                 type={"text"}
+                                value={lastName}
                                 bgColor={'white'}
                                 onChange={(e)=>setLastName(e.target.value)}
                             ></Input>
@@ -172,6 +183,7 @@ const Contact = () => {
                         <FormLabel>Email:</FormLabel>
                         <Input
                             type={"text"}
+                            value={email}
                             bgColor={'white'}
                             onChange={(e)=>setEmail(e.target.value)}
                         ></Input>
@@ -179,8 +191,9 @@ const Contact = () => {
                     <FormControl isRequired>
                         <FormLabel>Subject:</FormLabel>
                         <Input
-                            bgColor={'white'}
                             type={"text"}
+                            value={subject}
+                            bgColor={'white'}
                             onChange={(e)=>setSubject(e.target.value)}
                         ></Input>
                     </FormControl>
@@ -188,6 +201,7 @@ const Contact = () => {
                         <FormLabel>Message:</FormLabel>
                         <Textarea
                             bgColor={'#FFF'}
+                            value={message}
                             placeholder="Enter your message..."
                             onChange={(e)=>setMessage(e.target.value)}
                         ></Textarea>
