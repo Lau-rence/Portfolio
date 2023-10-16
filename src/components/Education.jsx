@@ -49,7 +49,7 @@ const Education = () => {
                     <Heading
                         fontSize={['30px','40px','50px','50px','50px']}
                         fontWeight={'bold'} 
-                        fontFamily={'Poppins'}
+                        fontFamily={'font2'}
                         color={'#FFF'}
                     >
                         TECH STACK
@@ -60,6 +60,7 @@ const Education = () => {
                         height={'max-content'}
                         py={'10px'}
                         display={['none','none','none','block','block']}
+                        fontFamily={'font2'}
                     >
                         <Swiper
                             spaceBetween={50}

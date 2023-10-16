@@ -137,7 +137,8 @@ const Contact = () => {
             >
                 <Heading 
                     color={'#475b67'}
-                    fontSize={['40px','40px','60px','60px','60px']} 
+                    fontFamily={'font2'} 
+                    fontSize={['40px','40px','60px','60px','60px']}
                 >
                     GET IN TOUCH
                 </Heading>

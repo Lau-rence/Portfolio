@@ -24,8 +24,9 @@ const Experience = () => {
                 width={'max-content'} 
             >
                 <Heading 
-                    fontSize={['40px','40px','60px','60px','60px']} 
                     color={'#475b67'}
+                    fontFamily={'font2'}
+                    fontSize={['40px','40px','60px','60px','60px']} 
                 >
                     EXPERIENCE
                 </Heading>
@@ -58,6 +59,7 @@ const Experience = () => {
                         fontSize={'30px'} 
                         fontWeight={'bold'}
                         textAlign={'center'}
+                        fontFamily={'font2'}
                     >
                         {info.role}
                     </Text>
@@ -92,7 +94,9 @@ const Experience = () => {
                                     Show Responsibilities
                                 </Box>
                             </AccordionButton>
-                            <AccordionPanel pb={4}>
+                            <AccordionPanel
+                                pb={4}
+                            >
                                 <UnorderedList>
                                     <ListItem>
                                         Translate Figma designs into functional websites.

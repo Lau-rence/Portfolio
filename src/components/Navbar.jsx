@@ -37,7 +37,7 @@ const Navbar = () => {
                 pr={['15px', '15px', '15px', '15px', '100px']}
                 display={'flex'}
                 fontSize={'20px'}
-                fontFamily={'Poppins'}
+                fontFamily={'font2'}
                 backgroundColor={'#343d46'}
                 boxShadow={'2px 2px 2px black'}
                 justifyContent={'space-between'}
@@ -45,7 +45,7 @@ const Navbar = () => {
                 <Flex
                     align={'end'}
                     fontSize={'25px'}
-                    fontFamily={'Nelsond'} 
+                    fontFamily={'font3'} 
                 >
                     <Text color={'#edb506'}>
                         &#8623;
@@ -66,7 +66,7 @@ const Navbar = () => {
                                 color={"c1c5ce"}
                             />
                         </MenuButton>
-                        <MenuList color={'#343d46'} fontFamily={'Poppins'}>
+                        <MenuList color={'#343d46'} fontFamily={'font2'}>
                             {navbar.map(info=>(
                                 <MenuItem onClick={()=>scrollToSection(info.page)}>{info.title}</MenuItem>
                             ))}

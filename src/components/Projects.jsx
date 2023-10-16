@@ -34,19 +34,19 @@ const Projects = () => {
             >
                 <Heading
                     color={'#FFF'} 
-                    fontSize={'70px'}
-                    fontFamily={'Bebas Neue'} 
+                    fontSize={'60px'}
+                    fontFamily={'font2'} 
                 >
                     PROJECTS
                 </Heading>
             </Flex>
                 {projects.map(info=>(
                     <Box
-                        data-aos="fade-left"
                         mb={'30px'}
                         width={'80%'} 
                         display={'flex'} 
                         bgColor={'#343d46'}
+                        data-aos="fade-left"
                         borderRadius={'10px'}
                         justifyContent={'center'}
                         flexDirection={['column-reverse','column-reverse','row','row','row']}

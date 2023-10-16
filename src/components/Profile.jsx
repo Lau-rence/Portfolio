@@ -70,14 +70,14 @@ const Profile = () => {
                         >
                         <Heading
                             fontWeight={'bold'} 
-                            fontFamily={'Poppins'} 
+                            fontFamily={'font2'} 
                             fontSize={['30px','40px','50px','50px','50px']}
                         >
                             Laurence Canlas Santos
                         </Heading>
                         <Text
                             fontSize={'20px'}
-                            fontFamily={'Poppins'} 
+                            fontFamily={'font2'} 
                         >
                             Junior Full-Stack Developer
                         </Text>
@@ -133,7 +133,7 @@ const Profile = () => {
                         color={'#010001'} 
                         fontSize={['75px','75px','150px','150px','150px']} 
                         fontWeight={'bold'} 
-                        fontFamily={'Bebas Neue'}
+                        fontFamily={'font1'}
                     >
                         <Marquee
                             style={{
