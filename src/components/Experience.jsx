@@ -7,6 +7,7 @@ const Experience = () => {
             what: 'Highly Succeed is a Philippines-based IT servicing and product company that specializes on a wide range of web based services. We are composed of professionals in graphic design, web development, custom application creation, and mobile application.',
             when: 'May 2023 - August 2023',
             role: 'Web Developer Intern',
+            picture: 'https://scontent.fcrk1-3.fna.fbcdn.net/v/t39.30808-6/327715974_1330444557798318_6810416811751437767_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGEIzRo3iI5HZ687KVpyQWk8cHQ1OCL12LxwdDU4IvXYkkqE0LhyUH36J2JiP_T7ln5kA60fi46-eavEIy8rKEh&_nc_ohc=mIpW6M8Fr28AX_Etk3q&_nc_ht=scontent.fcrk1-3.fna&oh=00_AfArzHAuJ18vk_99sLk7mQWEn2uBKxCiU1ysY3XWmJOmEA&oe=65467973'
         }
     ]
     return (
@@ -52,7 +53,7 @@ const Experience = () => {
                             height={'auto'}
                             width={'400px'}
                             borderRadius={'400px'}
-                            src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t39.30808-6/327715974_1330444557798318_6810416811751437767_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGEIzRo3iI5HZ687KVpyQWk8cHQ1OCL12LxwdDU4IvXYkkqE0LhyUH36J2JiP_T7ln5kA60fi46-eavEIy8rKEh&_nc_ohc=oDCjQ6dqv0IAX_I2myb&_nc_ht=scontent.fcrk1-3.fna&oh=00_AfAJ2monuBzWKCws8SpUdFxfmEmH9JyXQ_FwRDxjNl5-6Q&oe=652EBE73"
+                            src={info.picture}
                         />
                     </Box>
                     <Text 

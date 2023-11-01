@@ -15,6 +15,12 @@ const Projects = () => {
             link: 'https://lau-pokemon-app.netlify.app/',
             description: 'A website that displays the event and all the pokemon evolution.',
         },
+        {
+            pic: 'agriculture-app.png',
+            title: 'Agriculture Industry',
+            link: 'https://lau-agriculture.netlify.app/',
+            description: 'An example of agriculture industry website.',
+        },
     ]
     return ( 
         <Box

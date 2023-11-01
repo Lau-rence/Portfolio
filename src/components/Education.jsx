@@ -11,6 +11,7 @@ const Education = () => {
         { stack: 'HTML', icon: FaHtml5 },
         { stack: 'CSS', icon: FaCss3Alt },
         { stack: 'JavaScript', icon: FaJs },
+        { stack: 'TypeScript', icon: FaJs },
         { stack: 'React JS', icon: FaReact },
         { stack: 'Node JS', icon: FaNodeJs },
         { stack: 'Express JS', icon: FaJs },
